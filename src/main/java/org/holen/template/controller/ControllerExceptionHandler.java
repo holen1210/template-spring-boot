@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
+ * 捕获从controller抛出的异常,进行统一处理
  * @author lvhaolin
  * @date 2018/11/20
  */
