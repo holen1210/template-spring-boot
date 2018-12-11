@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * 捕获从controller抛出的异常,进行统一处理
+ *
  * @author lvhaolin
  * @date 2018/11/20
  */
@@ -53,7 +54,7 @@ public class ControllerExceptionHandler {
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public HttpResult exceptionHandler(Exception ex) {
-        return HttpResult.newFailure("未知错误");
+        return HttpResult.newFailure(ex.getMessage());
     }
 
 }

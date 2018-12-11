@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @ApiOperation(value = "增加用户", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ApiOperation(value = "增加用户")
     @PostMapping("/user/create")
     public HttpResult<UserVO> createUser(@RequestBody @Validated UserVO userVO) {
         return HttpResult.newSuceess(userVO);

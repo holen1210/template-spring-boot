@@ -1,6 +1,7 @@
 package org.holen.template.domain.vo;
 
 import lombok.Data;
+import org.holen.template.annotation.validate.Email;
 
 import javax.validation.constraints.NotBlank;
 
@@ -14,6 +15,9 @@ public class UserVO {
     private String username;
 
     @NotBlank(message = "手机号不能为空")
-    private Long phone;
+    private String phone;
+
+    @Email
+    private String email;
 
 }
