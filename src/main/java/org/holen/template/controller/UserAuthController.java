@@ -23,6 +23,7 @@ public class UserAuthController {
     @ApiOperation("用户登录")
     @PostMapping("/login")
     public HttpResult<String> login(@Validated UserAuthREQ userAuthREQ) {
+
         return userAuthService.login(userAuthREQ);
     }
 
