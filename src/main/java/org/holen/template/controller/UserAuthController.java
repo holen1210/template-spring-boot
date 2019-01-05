@@ -3,7 +3,7 @@ package org.holen.template.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.holen.template.common.HttpResult;
-import org.holen.template.domain.req.UserAuthREQ;
+import org.holen.template.domain.req.user.UserAuthReq;
 import org.holen.template.service.UserAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -22,7 +22,7 @@ public class UserAuthController {
 
     @ApiOperation("用户登录")
     @PostMapping("/login")
-    public HttpResult<String> login(@Validated UserAuthREQ userAuthREQ) {
+    public HttpResult<String> login(@Validated UserAuthReq userAuthREQ) {
         return userAuthService.login(userAuthREQ);
     }
 

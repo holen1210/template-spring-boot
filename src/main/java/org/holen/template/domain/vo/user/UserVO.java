@@ -1,4 +1,4 @@
-package org.holen.template.domain.vo;
+package org.holen.template.domain.vo.user;
 
 import lombok.Data;
 import org.holen.template.annotation.validate.Email;

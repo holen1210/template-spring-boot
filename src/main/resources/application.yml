@@ -2,11 +2,16 @@ spring:
   profiles:
     active: dev
 
-
 ---
+
 spring:
   profiles: local
 
 ---
+
 spring:
   profiles: dev
+
+---
+spring:
+  profiles: online

@@ -1,11 +1,10 @@
 package org.holen.template.service;
 
 import org.holen.template.common.HttpResult;
-import org.holen.template.domain.req.UserAuthREQ;
+import org.holen.template.domain.req.user.UserAuthReq;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
-import java.util.UUID;
 
 /**
  * @author holen
@@ -13,7 +12,7 @@ import java.util.UUID;
  */
 @Service
 public class UserAuthService {
-    public HttpResult<String> login(UserAuthREQ userAuthREQ) {
+    public HttpResult<String> login(UserAuthReq userAuthREQ) {
         String username = userAuthREQ.getUsername();
         String password = userAuthREQ.getPassword();
         // 持久化暂时省略
