@@ -8,6 +8,7 @@ import org.holen.template.service.UserAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -22,8 +23,8 @@ public class UserAuthController {
 
     @ApiOperation("用户登录")
     @PostMapping("/login")
-    public HttpResult<String> login(@Validated UserAuthReq userAuthREQ) {
-        return userAuthService.login(userAuthREQ);
+    public HttpResult<String> login(@RequestBody @Validated UserAuthReq req) {
+        return userAuthService.login(req);
     }
 
     @ApiOperation("用户登出")
