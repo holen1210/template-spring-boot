@@ -49,6 +49,11 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional> <!-- 这个网上说需要设置为 true 热部署才有效,实测没有也可以的 -->
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
         <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
